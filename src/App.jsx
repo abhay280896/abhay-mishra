@@ -36,7 +36,7 @@ const resumeViewUrl =
 const resumeDownloadUrl =
   'https://docs.google.com/document/d/1hsjUNm-l-f36m2BJ3Cr8RCOhdbkro2Zwq5xcvc7F7bU/export?format=pdf'
 
-const profileImageSrc = '/myPic.jpg'
+const profileImageSrc = '/myPic.png'
 
 const experience = [
   {

@@ -68,7 +68,7 @@ const experience = [
     company: 'Nimap',
     product: 'Alchemy (Godrej Properties)',
     role: 'Frontend Developer',
-    duration: 'Dec 2022 - Aug 2023',
+    duration: 'Dec 2022 - Nov 2023',
     points: [
       'Contributed to the development of an enterprise learning platform by building intuitive interfaces that supported employee learning and organizational upskilling initiatives.',
     ],
@@ -77,7 +77,7 @@ const experience = [
     company: 'Nimap',
     product: 'Collection',
     role: 'Frontend Developer',
-    duration: 'Mar 2022 - Nov 2023',
+    duration: 'Mar 2022 - Nov 2022',
     points: [
       'Built responsive and reusable frontend features for a finance collection application.',
       'Collaborated with senior developers to integrate REST APIs and deliver business requirements.',
@@ -88,7 +88,7 @@ const experience = [
     company: 'Nimap',
     product: 'Nimap Talent Transformation System (NTTS)',
     role: 'Frontend Developer',
-    duration: 'Aug 2021 - Feb 2023',
+    duration: 'Aug 2021 - Feb 2022',
     points: [
       'Developed frontend interfaces for employee and admin portals used for hiring, resource allocation, bench utilization, client assignments, task management, and performance reviews.',
       'Built reusable React components and responsive interfaces to improve maintainability and speed up feature delivery.',

@@ -197,6 +197,59 @@ a {
   gap: 22px;
 }
 
+.profile-card {
+  gap: 24px;
+}
+
+.profile-photo-shell {
+  width: 100%;
+}
+
+.profile-photo-surface {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  background: #ffffff;
+  padding: 14px;
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+.profile-photo,
+.profile-photo-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+}
+
+.profile-photo {
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  background: #ffffff;
+}
+
+.profile-photo-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #eef2ff 100%);
+  color: #0f172a;
+  text-align: center;
+  padding: 24px;
+}
+
+.profile-photo-fallback span {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.profile-photo-fallback strong {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
 .hero-card h2 {
   margin: 0;
   font-size: 1.8rem;
@@ -374,6 +427,40 @@ a {
   gap: 12px;
 }
 
+.resume-card {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(14, 20, 38, 0.76);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.22);
+  border-radius: 28px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.resume-copy {
+  max-width: 620px;
+}
+
+.resume-copy h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.resume-copy p {
+  margin: 0;
+  color: rgba(231, 236, 255, 0.78);
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
 .education-section {
   padding-bottom: 32px;
 }
@@ -416,6 +503,15 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .resume-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-actions {
+    justify-content: flex-start;
+  }
+
   .hero-copy h1 {
     max-width: 100%;
   }
@@ -445,6 +541,7 @@ a {
   .about-card,
   .skill-card,
   .timeline-content,
+  .resume-card,
   .education-card,
   .footer {
     padding: 22px;

@@ -1,6 +1,8 @@
+import { useState } from 'react'
+
 const skills = {
   'Languages / Frameworks': ['JavaScript', 'HTML', 'CSS', 'Next.js'],
-  Tools: ['Node.js', 'NPM', 'Yarn', 'Vite', 'Webpack', 'Git', 'Jira Agile', 'AWS'],
+  Tools: ['Node.js', 'NPM', 'Yarn', 'Vite', 'Webpack', 'Git', 'Jira Agile', 'AWS', 'ChatGPT', 'Claude'],
   Libraries: [
     'React.js',
     'Redux',
@@ -23,10 +25,18 @@ const skills = {
 }
 
 const highlights = [
-  'Frontend developer with 4+ years of experience building scalable enterprise web applications.',
+  'Frontend developer with 5 years of experience building scalable enterprise web applications.',
   'Strong in React ecosystems, reusable component systems, JSON-driven dynamic forms, and business workflow automation.',
   'Experienced in collaborating with product, backend, QA, and design teams to ship production-ready features.',
 ]
+
+const resumeViewUrl =
+  'https://docs.google.com/document/d/1hsjUNm-l-f36m2BJ3Cr8RCOhdbkro2Zwq5xcvc7F7bU/edit?tab=t.0'
+
+const resumeDownloadUrl =
+  'https://docs.google.com/document/d/1hsjUNm-l-f36m2BJ3Cr8RCOhdbkro2Zwq5xcvc7F7bU/export?format=pdf'
+
+const profileImageSrc = '/myPic.png'
 
 const experience = [
   {
@@ -88,13 +98,15 @@ const experience = [
 ]
 
 const stats = [
-  { label: 'Years of experience', value: '4+' },
+  { label: 'Years of experience', value: '5' },
   { label: 'Configurable forms delivered', value: '1000+' },
   { label: 'Primary focus', value: 'React & Frontend' },
   { label: 'Location', value: 'Mumbai, India' },
 ]
 
 function App() {
+  const [isProfileImageReady, setIsProfileImageReady] = useState(true)
+
   return (
     <div className="page-shell">
       <header className="hero">
@@ -104,6 +116,7 @@ function App() {
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
+            <a href="#resume">Resume</a>
             <a href="#education">Education</a>
           </div>
         </nav>
@@ -126,10 +139,30 @@ function App() {
               <a className="button secondary" href="#skills">
                 Explore Skills
               </a>
+              <a className="button secondary" href={resumeDownloadUrl} target="_blank" rel="noreferrer">
+                Download Resume
+              </a>
             </div>
           </div>
 
-          <aside className="hero-card">
+          <aside className="hero-card profile-card">
+            <div className="profile-photo-shell">
+              <div className="profile-photo-surface">
+                {isProfileImageReady ? (
+                  <img
+                    className="profile-photo"
+                    src={profileImageSrc}
+                    alt="Abhay Mishra"
+                    onError={() => setIsProfileImageReady(false)}
+                  />
+                ) : (
+                  <div className="profile-photo-fallback">
+                    <span>Abhay Mishra</span>
+                    <strong>Frontend Developer</strong>
+                  </div>
+                )}
+              </div>
+            </div>
             <span className="card-kicker">Quick Profile</span>
             <h2>React-focused frontend engineer with enterprise product experience.</h2>
             <p>
@@ -232,6 +265,32 @@ function App() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="section" id="resume">
+          <div className="section-heading">
+            <span>Resume</span>
+            <h2>Download my resume</h2>
+          </div>
+
+          <div className="resume-card">
+            <div className="resume-copy">
+              <h3>For recruiters and hiring teams</h3>
+              <p>
+                You can view my latest resume online or download it directly as a PDF for job
+                applications and profile review.
+              </p>
+            </div>
+
+            <div className="resume-actions">
+              <a className="button primary" href={resumeDownloadUrl} target="_blank" rel="noreferrer">
+                Download PDF Resume
+              </a>
+              <a className="button secondary" href={resumeViewUrl} target="_blank" rel="noreferrer">
+                Open Google Doc
+              </a>
+            </div>
           </div>
         </section>
 
